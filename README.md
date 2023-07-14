@@ -1,8 +1,9 @@
-<<<<<<< HEAD
 # Blogweb Angular - Spring Boot Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+## Open Spring Boot folder.
+Run demoApplication folder on src>main>java/com/example/demo
 
-
-# Angular-Homework
->>>>>>> fabf863bc019e1646e384e35f9a44dea2c83878b
+## Change Direction to Angular.
+1.cd Angular-Homework-Main
+2. npm install
+3. ng serve
