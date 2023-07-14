@@ -1,0 +1,40 @@
+/* user-list.component.css */
+
+.category-list {
+    width: 100%;
+  }
+  
+  .category-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    text-align: center; /* Öğeleri ortada hizalar */
+  }
+  
+  .category-list th,
+  .category-list td {
+    padding: 10px;
+    text-align: center; /* Öğeleri ortada hizalar */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .category-list th {
+    background-color: #f2f2f2;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .category-list tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .category-list tbody tr:hover {
+    background-color: #e3e3e3;
+  }
+  
+  .category-list .btn {
+    margin-right: 5px;
+  }
+  

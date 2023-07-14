@@ -1,0 +1,53 @@
+/* user.component.css */
+
+.add-comment-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .add-comment-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-comment-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-comment-container .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .add-comment-container label {
+    font-weight: bold;
+  }
+  
+  .add-comment-container input[type="text"],
+  .add-comment-container input[type="email"],
+  .add-comment-container input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-comment-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #17a2b8;
+    color: #f9f9f9;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .add-comment-container button[type="submit"]:hover {
+    background-color: #138496;
+  }
+  

@@ -1,0 +1,36 @@
+<table class="user-list">
+    <thead class="thead-dark">
+       <tr>
+           <th scope="col">UserID</th>
+           <th scope="col">Username</th>
+           <th scope="col">Email</th>
+           <th scope="col">Creation Date</th>
+           <th scope="col">isActive</th>
+           <th scope="col">Buttons</th>
+       </tr>
+   </thead>
+   <tbody>
+       <tr *ngFor="let user of users$ | async">
+           <td class="table-text">{{ user.userID }}</td> 
+           <td class="table-text">{{ user.username }}</td>
+           <td class="table-text">{{ user.email }}</td>
+           <td class="table-text">{{ user.creationDate }}</td>
+           <td class="table-text">{{ user.isActive }}</td>
+           <td>
+             <!--<button (click)="updateUser(user.userID)" class="btn btn-info">Update</button>-->
+               <!--<button (click)="deleteUser(user.userID)" class="btn btn-danger"> Delete</button>-->
+               <button (click)="updateUser(user.userID)" class="btn btn-info">Update</button>
+               <!--<a [routerLink]="'/updateuser/' + user.userID">Details</a>-->
+                <!--<a [routerLink]="['/updateuser/', user.id]">Update</a>-->
+                <button (click)="deleteUserOnCondition(user)" class="btn btn-danger">Delete</button>
+                <button (click)="userDetails(user.userID!)" class="btn btn-info"> View</button>
+           </td>
+       </tr>
+   </tbody>
+</table>
+
+
+
+
+
+

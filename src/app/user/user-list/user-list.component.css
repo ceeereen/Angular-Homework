@@ -1,0 +1,40 @@
+/* user-list.component.css */
+
+.user-list {
+    width: 100%;
+  }
+  
+  .user-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    text-align: center; /* Öğeleri ortada hizalar */
+  }
+  
+  .user-list th,
+  .user-list td {
+    padding: 10px;
+    text-align: center; /* Öğeleri ortada hizalar */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-list th {
+    background-color: #f2f2f2;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-list tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-list tbody tr:hover {
+    background-color: #e3e3e3;
+  }
+  
+  .user-list .btn {
+    margin-right: 5px;
+  }
+  

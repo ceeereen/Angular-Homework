@@ -1,0 +1,31 @@
+<table class="category-list">
+    <thead class="thead-dark">
+       <tr> 
+          <th scope="col">Name</th>
+           <th scope="col">Creation Date</th>
+           <th scope="col">Buttons</th>
+       </tr>
+   </thead>
+   <tbody>
+       <tr *ngFor="let category of categories | async">
+            <td class="table-text">{{ category.name }}</td> 
+            <td class="table-text">{{ category.creationDate }}</td>  
+           
+           <td>
+             <!--<button (click)="updateUser(user.userID)" class="btn btn-info">Update</button>-->
+               <!--<button (click)="deleteUser(user.userID)" class="btn btn-danger"> Delete</button>-->
+                <button (click)="updateCategory(category.categoryID)" class="btn btn-info">Update</button>
+               <!--<a [routerLink]="'/updateuser/' + user.userID">Details</a>-->
+                <!--<a [routerLink]="['/updateuser/', user.id]">Update</a>-->
+                <button  (click)="deleteCategory(category.categoryID)" class="btn btn-danger">Delete</button>
+                <button (click)="categoryDetails(category.categoryID!)" class="btn btn-info"> View</button>
+           </td>
+       </tr>
+   </tbody>
+</table>
+
+
+
+
+
+

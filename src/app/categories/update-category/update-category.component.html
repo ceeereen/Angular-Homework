@@ -1,0 +1,15 @@
+<div class="update-category-container">
+    <h2>Update Category</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" id="category" [(ngModel)]="category.name" name="category" required>
+      </div>
+      <div class="form-group">
+        <label for="creationDate">Category Date</label>
+        <input type="date" id="creationDate" [(ngModel)]="category.creationDate" name="creationDate" required>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+    </form>
+  </div>
+  

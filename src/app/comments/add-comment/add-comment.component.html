@@ -1,0 +1,25 @@
+<div class="add-comment-container">
+    <h2>Add Comment</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="comment">Comment</label>
+        <input type="text" id="comment" [(ngModel)]="comment.comment" name="comment" required>
+      </div>
+      <div class="form-group">
+        <label for="creationDate">Comment Date</label>
+        <input type="date" id="creationDate" [(ngModel)]="comment.creationDate" name="creationDate" required>
+      </div>
+      <div class="form-group">
+        <label for="postID">postID</label>
+        <select id="postID" [(ngModel)]="comment.postID" name="postID" required>
+          <option *ngFor="let post of posts" [value]="post.postID">{{ post.postID }}</option>
+        </select>
+        <label for="userID">userID</label>
+        <select id="userID" [(ngModel)]="comment.userID" name="userID" required>
+          <option *ngFor="let user of users" [value]="user.userID">{{ user.userID }}</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </form>
+  </div>
+  

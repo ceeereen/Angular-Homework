@@ -1,0 +1,36 @@
+<div class="filter-form">
+  <label for="filterPostID">Filter by PostID:</label>
+  <input type="number" id="filterPostID" [(ngModel)]="filterPostID" name="filterPostID">
+  <label for="filterCategoryID">Filter by CategoryID:</label>
+  <input type="number" id="filterCategoryID" [(ngModel)]="filterCategoryID" name="filterCategoryID">
+  <label for="filterUserID">Filter by UserID:</label>
+  <input type="number" id="filterUserID" [(ngModel)]="filterUserID" name="filterUserID">
+  <button (click)="applyFilter()" class="btn btn-primary">Filter</button>
+</div>
+
+
+  <table class="post-list">
+    <thead>
+      <tr>
+        <th>UserID</th>
+        <th>PostID</th>
+        <th>Title</th>
+        <th>Post Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts | async">
+        <td>{{ post.userID }}</td>
+        <td>{{ post.postID }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.creationDate }}</td>
+        <td>
+          <button (click)="updatePost(post.postID)" class="btn btn-info">Update</button>
+          <button (click)="deletePostOnCondition(post)" class="btn btn-danger">Delete</button>
+          <button (click)="postDetails(post.postID!)" class="btn btn-info">View</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

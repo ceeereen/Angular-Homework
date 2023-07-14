@@ -1,0 +1,40 @@
+<div class="filter-form">
+  <label for="filterPostID">Filter by PostID:</label>
+  <input type="number" id="filterPostID" [(ngModel)]="filterPostID" name="filterPostID">
+  <button (click)="applyFilter()" class="btn btn-primary">Filter</button>
+</div>
+
+<table class="comment-list">
+    <thead class="thead-dark">
+       <tr>
+          <th scope="col">PostID</th>  
+          <th scope="col">CommentID</th>
+           <th scope="col">Comment</th>
+           <th scope="col">Buttons</th>
+           
+       </tr>
+   </thead>
+   <tbody>
+       <tr *ngFor="let comment of comments | async">
+            <td class="table-text">{{ comment.postID }}</td> 
+            <td class="table-text">{{ comment.commentID }}</td> 
+            <td class="table-text">{{ comment.comment }}</td> 
+           
+           <td>
+             <!--<button (click)="updateUser(user.userID)" class="btn btn-info">Update</button>-->
+               <!--<button (click)="deleteUser(user.userID)" class="btn btn-danger"> Delete</button>-->
+                <button (click)="updateComment(comment.commentID)" class="btn btn-info">Update</button>
+               <!--<a [routerLink]="'/updateuser/' + user.userID">Details</a>-->
+                <!--<a [routerLink]="['/updateuser/', user.id]">Update</a>-->
+                <button  (click)="deleteComment(comment.commentID)" class="btn btn-danger">Delete</button>
+                <button (click)="commentDetails(comment.commentID!)" class="btn btn-info"> View</button>
+           </td>
+       </tr>
+   </tbody>
+</table>
+
+
+
+
+
+

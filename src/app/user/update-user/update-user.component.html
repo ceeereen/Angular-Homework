@@ -1,0 +1,22 @@
+<div class="update-user-container">
+    <h2>Update User</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="user.email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="isActivity">Activity Status</label>
+        <select id="isActivity" [(ngModel)]="user.isActive" name="isActivity" required>
+          <option value="true">Active</option>
+          <option value="false">Inactive</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+  

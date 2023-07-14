@@ -1,0 +1,36 @@
+<div class="update-post-container">
+    <h2>Update Post</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="title">title</label>
+        <input type="text" id="title" [(ngModel)]="post.title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="content">content</label>
+        <input type="content" id="content" [(ngModel)]="post.content" name="content" required>
+      </div>
+      <div class="form-group">
+        <label for="viewCount">Views</label>
+        <input type="viewCount" id="viewCount" [(ngModel)]="post.viewCount" name="viewCount" required>
+      </div>
+      <div class="form-group">
+        <label for="creationDate">Creation Date</label>
+        <input type="date" id="creationDate" [(ngModel)]="post.creationDate" name="creationDate" required>
+      </div>
+      <div class="form-group">
+        <label for="isPublished">Publish Status</label>
+        <select id="isPublished" [(ngModel)]="post.isPublished" name="isPublished" required>
+          <option value="true">Published</option>
+          <option value="false">Not Published</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="userID">Username</label>
+        <select id="userID" [(ngModel)]="post.userID" name="userID" required>
+          <option *ngFor="let user of users" [value]="user.userID">{{ user.username }}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+  
