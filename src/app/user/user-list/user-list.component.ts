@@ -18,10 +18,11 @@ import { UserService } from 'src/app/user.service';
 })
 export class UserListComponent implements OnInit {
 
-  @Input() users!: User[];
+  users!: User[];
   private userSubject = new Subject<User>();
   public users$!: Observable<User[]>;
   posts: Posts[] = [];
+ 
 
   constructor(private userService: UserService, private postService: PostService, private commentService: commentService, private router: Router) {}
 
@@ -36,6 +37,7 @@ export class UserListComponent implements OnInit {
       this.updateUsers$();
     });
   }
+
 
   addUser(newUser: User) {
     this.userService.save(newUser).subscribe(user => {
